@@ -56,20 +56,9 @@ public class Animal {
         System.out.println("Я ем");
     }
 
-    public Animal(String name, int age, int weight, String color) {
-        this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.color = color;
-    }
-
-
-    // override toString
-
-
     @Override
     public String toString() {
-        return "Привет! Меня зовут " + getName() + ",мне " + getAge() + " " + getAgeName(getAge()) + ", я вешу - " + getWeight() + " кг,мой цвет - " + getColor();
+        return "Привет! Меня зовут " + getName() + ", мне " + getAge() + " " + getAgeName(getAge()) + ", я вешу - " + getWeight() + " кг, мой цвет - " + getColor();
     }
 
     // определяем лет/год/года
