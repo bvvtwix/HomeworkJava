@@ -26,15 +26,15 @@ public class Runner {
                     String animalType = scanner.next().trim().toLowerCase(Locale.ROOT);
                     if (animalType.equals("cat")){
                         animal = new Cat();
-                        askQuestions(animal, scanner);
+                        createAnimal(animal, scanner);
                         animals.add(animal);
                     } else if (animalType.equals("dog")){
                         animal = new Dog();
-                        askQuestions(animal, scanner);
+                        createAnimal(animal, scanner);
                         animals.add(animal);
                     } else if (animalType.equals("duck")){
                         animal = new Duck();
-                        askQuestions(animal, scanner);
+                        createAnimal(animal, scanner);
                         animals.add(animal);
                     } else {
                         System.out.println("Неведомый зверь");
@@ -64,7 +64,7 @@ public class Runner {
 //        Animal an1 = new Animal("Vasa", 11, 4, "Gray");
     }
 
-    public static void askQuestions(Animal animal, Scanner scanner){
+    public static void createAnimal(Animal animal, Scanner scanner){
         System.out.println("Какое имя?");
         String name = scanner.next();
         animal.setName(name);
