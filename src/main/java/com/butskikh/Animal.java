@@ -58,19 +58,19 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Привет! Меня зовут " + getName() + ", мне " + getAge() + " " + getAgeName(getAge()) + ", я вешу - " + getWeight() + " кг, мой цвет - " + getColor();
+        return "Привет! Меня зовут " + name + ", мне " + age + " " + getAgeName(age) + ", я вешу - " + weight + " кг, мой цвет - " + color;
     }
 
     // определяем лет/год/года
     public String getAgeName(int age){
         String year = "";
 
-            if (age % 10 == 1){
-                year = "год";
+            if (age >= 11 && age <= 15 ){
+                year = "лет";
             } else if (age % 10 >= 2 && age % 10 <= 4){
                 year = "года";
-            }  else if (age >= 11 && age <= 15 ){
-                year = "лет";
+            }  else if (age % 10 == 1){
+                year = "год";
             } else if (age % 10 == 0 || age % 10 >= 5 ){
                 year = "лет";
             }

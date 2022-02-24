@@ -11,14 +11,13 @@ public class Runner {
 
         Scanner scanner = new Scanner(System.in);
         String enter;
-//        boolean isNotExit = true;
 
         while (true){
 
             System.out.println("Выберете команду add/list/exit");
             enter = scanner.next().trim().toUpperCase(Locale.ROOT); //
             MenuCommands command = MenuCommands.valueOf(enter);
-            Animal animal = null;
+            Animal animal;
 
             switch (command){
                 case ADD:
@@ -52,7 +51,6 @@ public class Runner {
                     break;
                 case EXIT:
                     System.out.println("exit");
-//                    isNotExit = false;
                     System.out.println("Вы вышли из программы!");
                     System.exit(0);
                     break;
@@ -60,8 +58,6 @@ public class Runner {
                     System.out.println("Ведена не корректная команда");
             }
         }
-
-//        Animal an1 = new Animal("Vasa", 11, 4, "Gray");
     }
 
     public static void createAnimal(Animal animal, Scanner scanner){
